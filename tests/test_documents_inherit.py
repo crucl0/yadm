@@ -9,7 +9,7 @@ class DocumentsTest(TestCase):
     def setUp(self):
         class TestDoc(Document):
             i = fields.IntegerField
-            b = fields.SetField(())
+            b = fields.SetField(fields.IntegerField())
 
         self.TestDoc = TestDoc
 
